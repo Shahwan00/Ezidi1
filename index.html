@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTMD | إنشاء حساب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">🌿 DTMD</div>
+        <h2>إنشاء حساب جديد</h2>
+
+        <form id="registerForm">
+            <div style="text-align: center; margin-bottom: 15px;">
+                <label for="photo" style="cursor: pointer; display: inline-block;">
+                    <div id="plus" style="width: 80px; height: 80px; border-radius: 50%; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 24px;">+</div>
+                    <img id="preview" style="width: 80px; height: 80px; border-radius: 50%; display: none; object-fit: cover;">
+                </label>
+                <input type="file" id="photo" accept="image/*" style="display: none;">
+            </div>
+
+            <input type="text" id="fullnameInput" placeholder="الاسم الثلاثي">
+            <input type="email" id="emailInput" placeholder="البريد الإلكتروني">
+            <input type="password" id="passInput" placeholder="كلمة المرور">
+            <input type="password" id="passConfirmInput" placeholder="تأكيد كلمة المرور">
+
+            <label style="display: block; text-align: right; font-size: 14px;">تاريخ الميلاد:</label>
+            <input type="date" id="birth">
+            <input type="text" id="zodiac" placeholder="البرج (تلقائي)" readonly>
+
+            <select id="social">
+                <option selected disabled>اختر الحالة الاجتماعية</option>
+                <option value="أعزب/عزباء">أعزب/عزباء</option>
+                <option value="متزوج/ة">متزوج/ة</option>
+            </select>
+
+            <select id="gender">
+                <option selected disabled>اختر الجنس</option>
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+            </select>
+
+            <select id="ezidiClass">
+                <option selected disabled>الطبقة الاجتماعية الإيزيدية</option>
+                <option value="مريب">مريب</option>
+                <option value="شێخ">شێخ</option>
+                <option value="پێر">پێر</option>
+            </select>
+
+            <select id="country">
+                <option selected disabled>اختر الدولة</option>
+                <option value="العراق">العراق</option>
+                <option value="ألمانيا">ألمانيا</option>
+                <option value="أخرى">أخرى</option>
+            </select>
+
+            <input type="text" id="region" placeholder="المنطقة / المدينة">
+            <input type="text" id="job" placeholder="المهنة">
+
+            <div style="text-align: right; margin: 10px 0;">
+                <label style="font-size: 14px; display: block;">اللغات:</label>
+                <label><input type="checkbox" name="lang" value="العربية"> العربية</label>
+                <label><input type="checkbox" name="lang" value="الكردية الإيزيدية"> الكردية الإيزيدية</label>
+                <label><input type="checkbox" name="lang" value="الألمانية"> الألمانية</label>
+            </div>
+
+            <select id="level">
+                <option selected disabled>مستوى اللغة الإيزيدية</option>
+                <option value="مبتدئ">مبتدئ</option>
+                <option value="متوسط">متوسط</option>
+                <option value="متقدم">متقدم</option>
+            </select>
+
+            <button type="submit" id="register">إنشاء الحساب</button>
+        </form>
+
+        <p style="margin-top: 15px; text-align: center; font-size: 14px;">
+            لديك حساب بالفعل؟ <a href="login.html" style="color: #0a9b32; font-weight: bold;">تسجيل الدخول</a>
+        </p>
+    </div>
+
+    <script src="input.js"></script>
+</body>
+</html>
