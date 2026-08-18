@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTMD | الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div style="background:#ffffff; padding:15px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <div class="logo" style="margin:0;">🌿 DTMD</div>
+        <div>
+            <button onclick="logout()" style="width:auto; padding:5px 10px; background:#d32f2f;">خروج 🚪</button>
+        </div>
+    </div>
+
+    <div style="max-width: 500px; margin: 20px auto; padding: 0 10px;">
+        <!-- صندوق إنشاء منشور -->
+        <div style="background:#fff; padding:15px; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.1); margin-bottom:20px;">
+            <textarea id="postInput" placeholder="بماذا تفكر اليوم؟ (سيتم إضافة الرمز المقدّس للمفردات الخاصة تلقائياً)"></textarea>
+
+            <img id="imagePreview" style="max-width:100%; border-radius:8px; display:none; margin-top:10px;">
+            <video id="videoPreview" controls style="max-width:100%; border-radius:8px; display:none; margin-top:10px;"></video>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+                <div style="display:flex; gap:10px;">
+                    <label style="cursor:pointer;">📷 صورة <input type="file" id="postImage" accept="image/*" style="display:none;"></label>
+                    <label style="cursor:pointer;">🎥 فيديو <input type="file" id="postVideo" accept="video/*" style="display:none;"></label>
+                </div>
+                <button onclick="addNewPost()" style="width:auto; padding:8px 20px;">نشر</button>
+            </div>
+        </div>
+
+        <!-- التغذية -->
+        <div id="feedContainer"></div>
+    </div>
+
+    <!-- الشريط السفلي -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="active">🏠</a>
+        <a href="learn.html" title="تعلم اللغة الإيزيدية">📚</a>
+        <a href="profile.html">👤</a>
+    </nav>
+
+    <script src="home.js"></script>
+</body>
+</html>
